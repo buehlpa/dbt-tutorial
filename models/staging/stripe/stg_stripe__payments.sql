@@ -1,7 +1,7 @@
 select
     id as payment_id,
     orderid as order_id,
-    amount,
+    {{cents_to_dollars("amount")}} as amount ,
     created as created_at,
     _batched_at,
     paymentmethod as payment_method,
